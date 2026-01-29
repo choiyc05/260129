@@ -22,8 +22,7 @@ origins = [
 
 def set_token(no: int, email: str):
     try:
-        iat = datetime.now(timezone.utc) + \
-            (timedelta(hours=7))         # Claim설정
+        iat = datetime.now(timezone.utc) + (timedelta(hours=7))         # Claim설정
         exp = iat + (timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES))
         data = {
             "email": email,
